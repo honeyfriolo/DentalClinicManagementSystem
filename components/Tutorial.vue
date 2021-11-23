@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-dental">Honey Grace</div>
+  <div class="bg-dental">Honey Grace new push</div>
 </template>
 
 <style lang="" scoped>
