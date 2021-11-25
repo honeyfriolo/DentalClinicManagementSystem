@@ -69,67 +69,11 @@
       >
         logout
       </button>
-    
-    <!-- Log out Confirmation -->
-      <div
-      class="
-        absolute
-        bg-white
-        w-64
-        h-20
-        float-left
-        border-black
-        rounded-xl
-        border
-        text-center
-        p-3
-        shadow
-      "
-    >
-      <div>Are you sure you want to log out?</div>
-
-      <div class="w-auto">
-        <button
-          class="
-            bg-red-700
-            hover:bg-red-600
-            text-white
-            font-bold
-            block
-            py-2
-            px-5
-            w-24
-            mt-6
-            mx-auto
-            rounded
-            whitespace-nowrap
-          "
-        >
-          Log Out
-        </button>
-
-        <button
-          class="
-            bg-blue-700
-            hover:bg-blue-600
-            text-white
-            font-bold
-            py-2
-            px-5
-            w-24
-            mt-1
-            mx-auto
-            rounded
-          "
-        >
-          Cancel
-        </button>
-      </div>
     </div>
 
-    </div>
 
     <div class="w-9/12 mx-auto text-center mt-20">
+    <!-- Search Bar -->
       <div
         class="relative flex w-80 h-9 float-right flex-wrap items-stretch mb-3"
       >
@@ -156,7 +100,7 @@
         </span>
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search Medicine"
           class="
             px-2
             py-1
@@ -174,60 +118,31 @@
           "
         />
       </div>
+      <!-- Table -->
       <table class="border border-black w-full">
         <thead>
           <tr class="h-10 text-center border border-black">
-            <th class="w-20">ID</th>
-            <th>Patient's Name</th>
-            <th>Age</th>
-            <th>Telephone</th>
-            <th>Date</th>
-            <th>Address</th>
-            <th>Complain</th>
-            <th>Procedure</th>
+            <th class="w-56">Medicine Name</th>
+            <th>Description</th>
+            <th>Stock Status</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
           <tr class="h-10">
-            <td>14</td>
-            <td>Honey Grace Friolo</td>
-            <td>18</td>
-            <td>09383069002</td>
-            <td>07/10/21</td>
-            <td>Aguada</td>
-            <td>Sensitivity</td>
-            <td>Extraction</td>
+            <td>Chlorhexidine</td>
+            <td>Antibiotic</td>
+            <td>Available</td>
           </tr>
           <tr class="h-10">
-            <td>14</td>
-            <td>Honey Grace Friolo</td>
-            <td>18</td>
-            <td>09383069002</td>
-            <td>07/10/21</td>
-            <td>Aguada</td>
-            <td>Sensitivity</td>
-            <td>Extraction</td>
+            <td>Tetracyclines</td>
+            <td>Antibiotic</td>
+            <td>Not Available</td>
           </tr>
           <tr class="h-10">
-            <td>14</td>
-            <td>Honey Grace Friolo</td>
-            <td>18</td>
-            <td>09383069002</td>
-            <td>07/10/21</td>
-            <td>Aguada</td>
-            <td>Sensitivity</td>
-            <td>Extraction</td>
-          </tr>
-          <tr class="h-10">
-            <td>14</td>
-            <td>Honey Grace Friolo</td>
-            <td>18</td>
-            <td>09383069002</td>
-            <td>07/10/21</td>
-            <td>Aguada</td>
-            <td>Sensitivity</td>
-            <td>Extraction</td>
+            <td>Anesthesia</td>
+            <td>Pain Reliever</td>
+            <td>Available</td>
           </tr>
         </tbody>
       </table>
@@ -236,10 +151,9 @@
         <button
           class="
             mt-20
-            hover:text-blue-500
-             hover:border-blue-500
-             border
-             hover:bg-white
+            hover:text-blue-500 hover:border-blue-500
+            border
+            hover:bg-white
             py-2
             px-5
             float-right
@@ -249,13 +163,88 @@
             text-white
             ml-5
             bg-blue-500
-            
           "
         >
-          Add Account
+          Add Medicine
         </button>
       </div>
     </div>
+
+<!-- Delete Medicine Confirmation-->
+    <div
+      class="
+        absolute
+        top-1/4
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        bg-white
+        w-1/4
+        h-32
+        border-black
+        rounded-xl
+        border
+        text-center
+        p-8
+        shadow
+      "
+    >
+      <div>Are you sure you want to delete?</div>
+
+      <div class="flex gap-2 w-full">
+        <button
+          class="
+            bg-red-700
+            hover:bg-red-600
+            text-white
+            font-bold
+            block
+            py-2
+            px-10
+            mt-3
+            ml-10
+            mr-5
+            rounded
+          "
+        >
+          No
+        </button>
+
+        <button
+          class="
+            bg-blue-700
+            hover:bg-blue-600
+            text-white
+            font-bold
+            py-2
+            px-10
+            mt-3
+            rounded
+          "
+        >
+          Yes
+        </button>
+      </div>
+    </div>
+
+<!-- Deleted Successfully! -->
+    <div class="
+        login
+        absolute
+        top-5
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        bg-white
+        p-1.5
+        px-28
+        rounded-2xl
+        mt-16
+        border
+        border-black
+      ">Deleted Successfully!</div>
+
+
   </div>
 </template>
 
@@ -267,4 +256,4 @@ export default {
 </script>
 
 <style>
-</style>
+</style>    
