@@ -3,8 +3,8 @@
     <h1 class="text-4xl text-center pt-20 w-5/12 mx-auto">
       Welcome to Dr. Gerong’s Dental Clinic Management System
     </h1>
-    <!-- <Login/> -->
-    <Register />
+    <Login/>
+    <!-- <Register /> -->
   </div>
 </template>
 
