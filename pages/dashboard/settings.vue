@@ -1,0 +1,226 @@
+<template>
+  <div class="flex relative">
+    <div class="bg-blue-300 w-2/12 h-screen pt-10">
+      <button
+        class="
+          bg-transparent
+          hover:bg-white hover:text-black
+          text-black
+          font-bold
+          py-2
+          px-4
+          hover:border-transparent
+          rounded
+          block
+          uppercase
+          w-full w-full
+        "
+      >
+        patients
+      </button>
+      <button
+        class="
+          bg-transparent
+          hover:bg-white hover:text-black
+          text-black
+          font-bold
+          py-2
+          px-4
+          hover:border-transparent
+          rounded
+          block
+          uppercase
+          w-full
+        "
+      >
+        inventory
+      </button>
+      <button
+        class="
+          bg-transparent
+          hover:bg-white hover:text-black
+          text-black
+          font-bold
+          py-2
+          px-4
+          hover:border-transparent
+          rounded
+          block
+          uppercase
+          w-full
+        "
+      >
+        settings
+      </button>
+      <button
+        class="
+          bg-transparent
+          hover:bg-white hover:text-black
+          text-black
+          font-bold
+          py-2
+          px-4
+          hover:border-transparent
+          rounded
+          block
+          uppercase
+          w-full
+        "
+      >
+        logout
+      </button>
+    </div>
+    <div class="w-9/12 mx-auto">
+      <h3 class="italic uppercase mt-5 border-b block">account information</h3>
+      <div>
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-right">
+  Edit Info
+</button>
+     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-left">
+ Save Info
+</button>
+      </div>
+      <div class="mt-8">
+        <form class="w-full max-w-sm">
+          <div class="md:flex md:items-center mb-6">
+            <div class="md:w-1/3">
+              <label
+                class="
+                  block
+                  text-gray-500
+                  font-bold
+                  md:text-right
+                  mb-1
+                  md:mb-0
+                  pr-4
+                "
+                for="email"
+              >
+                Email
+              </label>
+            </div>
+            <div class="md:w-2/3">
+              <input
+                class="
+                  bg-gray-200
+                  appearance-none
+                  border-2 border-gray-200
+                  rounded
+                  w-full
+                  py-2
+                  px-4
+                  text-gray-700
+                  leading-tight
+                  focus:outline-none focus:bg-white focus:border-purple-500
+                "
+                id="inline-full-name"
+                type="text"
+                value="rubengerong@gmail.com"
+              />
+            </div>
+          </div>
+
+          <div class="md:flex md:items-center mb-6">
+            <div class="md:w-1/3">
+              <label
+                class="
+                  block
+                  text-gray-500
+                  font-bold
+                  md:text-right
+                  mb-1
+                  md:mb-0
+                  pr-4
+                "
+                for="Username"
+              >
+                Username
+              </label>
+            </div>
+            <div class="md:w-2/3">
+              <input
+                class="
+                  bg-gray-200
+                  appearance-none
+                  border-2 border-gray-200
+                  rounded
+                  w-full
+                  py-2
+                  px-4
+                  text-gray-700
+                  leading-tight
+                  focus:outline-none focus:bg-white focus:border-purple-500
+                "
+                id="username"
+                type="text"
+                value="Admin"
+              />
+            </div>
+          </div>
+          <div class="md:flex md:items-center mb-6">
+            <div class="md:w-1/3">
+              <label
+                class="
+                  block
+                  text-gray-500
+                  font-bold
+                  md:text-right
+                  mb-1
+                  md:mb-0
+                  pr-4
+                "
+                for="inline-password"
+              >
+                Password
+              </label>
+            </div>
+            <div class="md:w-2/3">
+              <input
+                class="
+                  bg-gray-200
+                  appearance-none
+                  border-2 border-gray-200
+                  rounded
+                  w-full
+                  py-2
+                  px-4
+                  text-gray-700
+                  leading-tight
+                  focus:outline-none focus:bg-white focus:border-purple-500
+                "
+                id="inline-password"
+                type="password"
+                placeholder="********"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="
+        login
+        absolute
+        top-5
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        bg-white
+        p-1.5
+        px-28
+        rounded-2xl
+        mt-16
+        border border-black
+      "
+    >
+     Updated Successfully!
+    </div>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+</style>

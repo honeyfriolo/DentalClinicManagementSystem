@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex relative">
     <div class="bg-blue-300 w-2/12 h-screen pt-10">
       <button
         class="
@@ -178,10 +178,9 @@
         <button
           class="
             mt-20
-            hover:text-blue-500
-             hover:border-blue-500
-             border
-             hover:bg-white
+            hover:text-blue-500 hover:border-blue-500
+            border
+            hover:bg-white
             py-2
             px-5
             float-right
@@ -191,10 +190,84 @@
             text-white
             ml-5
             bg-blue-500
-            
           "
         >
-          Add Account
+          Add Patient
+        </button>
+      </div>
+    </div>
+    <div
+      class="
+        login
+        absolute
+        top-5
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        bg-white
+        p-1.5
+        px-28
+        rounded-2xl
+        mt-16
+        border border-black
+      "
+    >
+      Added Successfully!
+    </div>
+
+    <div
+      class="
+        absolute
+        top-1/4
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        bg-white
+        w-1/4
+        h-32
+        border-black
+        rounded-xl
+        border
+        text-center
+        p-8
+        shadow
+      "
+    >
+      <!-- DELETE PATIENT CONFIRMATION -->
+      <div>Are you sure you want to delete?</div>
+
+      <div class="flex gap-2 w-full">
+        <button
+          class="
+            bg-red-700
+            hover:bg-red-600
+            text-white
+            font-bold
+            block
+            py-2
+            px-10
+            mt-3
+            ml-10
+            mr-5
+            rounded
+          "
+        >
+          No
+        </button>
+
+        <button
+          class="
+            bg-blue-700
+            hover:bg-blue-600
+            text-white
+            font-bold
+            py-2
+            px-10
+            mt-3
+            rounded
+          "
+        >
+          Yes
         </button>
       </div>
     </div>

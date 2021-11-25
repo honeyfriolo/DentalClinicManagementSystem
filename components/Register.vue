@@ -21,7 +21,7 @@
           name="email"
           value=""
           placeholder="Email"
-          class="border-b block border-black pb-3 w-full"
+          class="border-b block border-black pb-3 w-full p-2"
         />
         <input
           type="text"
@@ -29,7 +29,7 @@
           name="username"
           value=""
           placeholder="Username"
-          class="border-b block border-black pb-3 mt-5 w-full"
+          class="border-b block border-black pb-3 mt-5 w-full p-2"
         />
         <input
           type="password"
@@ -37,7 +37,7 @@
           name="password"
           value=""
           placeholder="Password"
-          class="border-b block border-black pb-3 mt-5 w-full"
+          class="border-b block border-black pb-3 mt-5 w-full p-2"
         />
         <input
           type="password"
@@ -45,7 +45,7 @@
           name="password"
           value=""
           placeholder="Re-type Password"
-          class="border-b block border-black pb-3 mt-5 w-full"
+          class="border-b block border-black pb-3 mt-5 w-full p-2"
         />
 
         <div class="flex gap-2">
