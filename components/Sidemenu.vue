@@ -14,8 +14,8 @@
         uppercase
         w-full w-full
       "
-    > <NuxtLink to="/dashboard/patients">patients</NuxtLink>
-  
+    >
+      <NuxtLink to="/dashboard/patients">patients</NuxtLink>
     </button>
     <button
       class="
@@ -65,8 +65,9 @@
         uppercase
         w-full
       "
+      @click="toggleBtn()"
     >
-      <NuxtLink to=""> logout </NuxtLink>
+      logout
     </button>
 
     <!-- Log out Confirmation -->
@@ -84,6 +85,7 @@
         p-3
         shadow
       "
+      v-if="toggleModal"
     >
       <div>Are you sure you want to log out?</div>
 
@@ -103,6 +105,7 @@
             rounded
             whitespace-nowrap
           "
+          @click="toggleBtn"
         >
           Log Out
         </button>
@@ -120,6 +123,7 @@
             mx-auto
             rounded
           "
+          @click="toggleBtn"
         >
           Cancel
         </button>
@@ -129,7 +133,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      toggleModal: false,
+    };
+  },
+  methods: {
+    toggleBtn() {
+      this.toggleModal = !this.toggleModal;
+    },
+  },
+};
 </script>
 
 <style>

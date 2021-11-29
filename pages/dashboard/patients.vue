@@ -71,7 +71,7 @@
             <td>{{ patient.complain }}</td>
             <td>{{ patient.procedure }}</td>
             <td>
-              <i class="fa fa-trash p-3"></i>
+              <i class="fa fa-trash p-3" @click="toggleBtn()"></i>
               <i class="fa fa-edit p-3"></i>
             </td>
           </tr>
@@ -100,6 +100,8 @@
         </button>
       </div>
     </div>
+
+    <!-- ADDED SUCCESSFULLY-->
     <div
       class="
         login
@@ -120,7 +122,7 @@
     </div>
 
     <!-- DELETE PATIENT CONFIRMATION -->
-    <!-- <div
+    <div
       class="
         absolute
         top-1/4
@@ -137,6 +139,7 @@
         p-8
         shadow
       "
+      v-if="toggleModal"
     >
       <div>Are you sure you want to delete?</div>
 
@@ -155,6 +158,7 @@
             mr-5
             rounded
           "
+          @click="toggleBtn"
         >
           No
         </button>
@@ -170,11 +174,13 @@
             mt-3
             rounded
           "
+          @click="toggleBtn"
         >
           Yes
         </button>
       </div>
-    </div> -->
+    </div>
+    -->
   </div>
 </template>
 
@@ -227,10 +233,15 @@ export default {
           procedure: "Extraction",
         },
       ],
+      toggleModal: false,
     };
   },
 
-  methods: {},
+  methods: {
+    toggleBtn() {
+      this.toggleModal = !this.toggleModal;
+    },
+  },
 };
 </script>
 

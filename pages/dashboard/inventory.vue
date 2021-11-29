@@ -64,7 +64,7 @@
             <td>{{ medicine.description }}</td>
             <td>{{ medicine.stockStatus }}</td>
             <td>
-              <i class="fa fa-trash p-3"></i>
+              <i class="fa fa-trash p-3"  @click="toggleBtn()"></i>
               <i class="fa fa-edit p-3"></i>
             </td>
           </tr>
@@ -95,7 +95,7 @@
     </div>
 
     <!-- Delete Medicine Confirmation-->
-    <!-- <div
+     <div
       class="
         absolute
         top-1/4
@@ -112,6 +112,7 @@
         p-8
         shadow
       "
+      v-if="toggleModal"
     >
       <div>Are you sure you want to delete?</div>
 
@@ -130,6 +131,7 @@
             mr-5
             rounded
           "
+            @click="toggleBtn"
         >
           No
         </button>
@@ -145,11 +147,12 @@
             mt-3
             rounded
           "
+             @click="toggleBtn"
         >
           Yes
         </button>
       </div>
-    </div> -->
+    </div>
 
     <!-- Deleted Successfully! -->
     <div
@@ -201,7 +204,13 @@ export default {
           stockStatus: "Available",
         },
       ],
+       toggleModal: false,
     };
+  },
+    methods: {
+    toggleBtn() {
+      this.toggleModal = !this.toggleModal;
+    },
   },
 };
 </script>
