@@ -1,328 +1,180 @@
 <template>
-  <div class="flex">
-     <Sidemenu/>
-
-    <div class="w-9/12 mx-auto">
-      <h3 class="italic uppercase mt-5 border-b block">
-        add patient's information
-      </h3>
-
-      <div class="flex pr-28 pt-10">
-        <form class="w-full max-w-lg">
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="
-                  block
-                  uppercase
-                  tracking-wide
-                  text-gray-700 text-xs
-                  font-bold
-                  mb-2
-                "
-                for="patients-name"
-              >
-                Patient's Name
-              </label>
-              <input
-                class="
-                  appearance-none
-                  block
-                  w-full
-                  bg-gray-200
-                  text-gray-700
-                  rounded
-                  py-3
-                  px-4
-                  mb-3
-                  leading-tight
-                  focus:outline-none focus:bg-white
-                "
-                id="grid-first-name"
-                type="text"
-                placeholder="Jeon Jungkook"
-              />
-            </div>
-            <div class="w-full md:w-1/2 px-3">
-              <label
-                class="
-                  block
-                  uppercase
-                  tracking-wide
-                  text-gray-700 text-xs
-                  font-bold
-                  mb-2
-                "
-                for="age"
-              >
-                Age
-              </label>
-              <input
-                class="
-                  appearance-none
-                  block
-                  w-full
-                  bg-gray-200
-                  text-gray-700
-                  border border-gray-200
-                  rounded
-                  py-3
-                  px-4
-                  leading-tight
-                  focus:outline-none focus:bg-white focus:border-gray-500
-                "
-                id="age"
-                type="text"
-                placeholder="24"
-              />
-            </div>
-          </div>
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="
-                  block
-                  uppercase
-                  tracking-wide
-                  text-gray-700 text-xs
-                  font-bold
-                  mb-2
-                "
-                for="patients-name"
-              >
-                Telephone
-              </label>
-              <input
-                class="
-                  appearance-none
-                  block
-                  w-full
-                  bg-gray-200
-                  text-gray-700
-                  rounded
-                  py-3
-                  px-4
-                  mb-3
-                  leading-tight
-                  focus:outline-none focus:bg-white
-                "
-                id="grid-first-name"
-                type="text"
-                placeholder="09265069226"
-              />
-            </div>
-            <div class="w-full md:w-1/2 px-3">
-              <label
-                class="
-                  block
-                  uppercase
-                  tracking-wide
-                  text-gray-700 text-xs
-                  font-bold
-                  mb-2
-                "
-                for="date"
-              >
-                Date
-              </label>
-              <input
-                class="
-                  appearance-none
-                  block
-                  w-full
-                  bg-gray-200
-                  text-gray-700
-                  border border-gray-200
-                  rounded
-                  py-3
-                  px-4
-                  leading-tight
-                  focus:outline-none focus:bg-white focus:border-gray-500
-                "
-                id="age"
-                type="date"
-                placeholder=""
-              />
-            </div>
-          </div>
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label
-                class="
-                  block
-                  uppercase
-                  tracking-wide
-                  text-gray-700 text-xs
-                  font-bold
-                  mb-2
-                "
-                for="address"
-              >
-                Address
-              </label>
-              <input
-                class="
-                  appearance-none
-                  block
-                  w-full
-                  bg-gray-200
-                  text-gray-700
-                  rounded
-                  py-3
-                  px-4
-                  mb-3
-                  leading-tight
-                  focus:outline-none focus:bg-white
-                "
-                id="grid-first-name"
-                type="text"
-                placeholder="09265069226"
-              />
-            </div>
-            <div class="w-full md:w-1/2 px-3">
-              <label
-                class="
-                  block
-                  uppercase
-                  tracking-wide
-                  text-gray-700 text-xs
-                  font-bold
-                  mb-2
-                "
-                for="text"
-              >
-                Complain
-              </label>
-              <input
-                class="
-                  appearance-none
-                  block
-                  w-full
-                  bg-gray-200
-                  text-gray-700
-                  border border-gray-200
-                  rounded
-                  py-3
-                  px-4
-                  leading-tight
-                  focus:outline-none focus:bg-white focus:border-gray-500
-                "
-                id="age"
-                type="text"
-                placeholder="Pain"
-              />
-            </div>
-          </div>
-
-          <div class="flex flex-wrap -mx-3 mb-2">
-            <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-              <label
-                class="
-                  block
-                  uppercase
-                  tracking-wide
-                  text-gray-700 text-xs
-                  font-bold
-                  mb-2
-                "
-                for="procedure"
-              >
-                procedure
-              </label>
-              <div class="relative">
-                <select
-                  class="
-                    block
-                    appearance-none
-                    w-full
-                    bg-gray-200
-                    border border-gray-200
-                    text-gray-700
-                    py-3
-                    px-4
-                    pr-8
-                    rounded
-                    leading-tight
-                    focus:outline-none focus:bg-white focus:border-gray-500
-                  "
-                  id="procedure"
-                >
-                  <option>Extraction</option>
-                  <option>Missouri</option>
-                  <option>Texas</option>
-                </select>
-                <div
-                  class="
-                    pointer-events-none
-                    absolute
-                    inset-y-0
-                    right-0
-                    flex
-                    items-center
-                    px-2
-                    text-gray-700
-                  "
-                >
-                  <svg
-                    class="fill-current h-4 w-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-        
+  <div class="flex relative">
+    <Sidemenu />
+    <div class="w-9/12 mx-auto text-center mt-20">
+      <div
+        class="relative flex w-80 h-9 float-right flex-wrap items-stretch mb-3"
+      >
+        <span
+          class="
+            z-10
+            h-full
+            leading-snug
+            font-normal
+            absolute
+            text-center text-gray-400
+            absolute
+            bg-transparent
+            rounded
+            text-base
+            items-center
+            justify-center
+            w-8
+            pl-2
+            py-1
+          "
+        >
+          <i class="fas fa-search"></i>
+        </span>
+        <input
+          type="text"
+          placeholder="Search"
+          class="
+            px-2
+            py-1
+            placeholder-gray-400
+            text-gray-600
+            relative
+            bg-white bg-white
+            rounded-full
+            text-sm
+            border border-gray-400
+            outline-none
+            focus:outline-none focus:ring
+            w-full
+            pl-10
+          "
+        />
       </div>
-
-     <div class="flex pl-24">
-              <button
-            class="
-            bg-red-500 
-            hover:bg-red-700
-              text-white
-              font-bold
-              py-2
-              px-14
-              
-              rounded-tl-lg
-               rounded-bl-lg
-                
-              uppercase
-              
-              mt-5
-
-            "
-          >
-            cancel
-          </button>
-          <button
-            class="
-              bg-blue-500
-              hover:bg-blue-700
-              text-white
-              font-bold
-              py-2
-              px-16
-              rounded-tr-lg
-              rounded-br-lg
-              uppercase
-              block
-              
-              mt-5
-            "
-          >
-            add
-          </button>
-        
-        </div>
+      <table class="border border-black w-full">
+        <thead>
+          <tr class="h-10 text-center border border-black">
+            <th class="w-20">ID</th>
+            <th>Patient's Name</th>
+            <th>Age</th>
+            <th>Telephone</th>
+            <th>Date</th>
+            <th>Address</th>
+            <th>Complain</th>
+            <th>Procedure</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="h-10" v-for="(patient, index) in patients" :key="index">
+            <td>{{ patient.id }}</td>
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.telephone }}</td>
+            <td>{{ patient.date }}</td>
+            <td>{{ patient.address }}</td>
+            <td>{{ patient.complain }}</td>
+            <td>{{ patient.procedure }}</td>
+            <td>
+              <i class="fa fa-trash p-3"></i>
+              <i class="fa fa-edit p-3"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <Pagination />
+      <div>
+        <button
+          class="
+            mt-20
+            hover:text-blue-500 hover:border-blue-500
+            border
+            hover:bg-white
+            py-2
+            px-5
+            float-right
+            rounded-lg
+            font-bold
+            mt-5
+            text-white
+            ml-5
+            bg-blue-500
+          "
+        >
+          Add Patient
+        </button>
+      </div>
     </div>
-   
+    <div
+      class="
+        login
+        absolute
+        top-5
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        bg-white
+        p-1.5
+        px-28
+        rounded-2xl
+        mt-16
+        border border-black
+      "
+    >
+      Added Successfully!
+    </div>
+
+    <!-- DELETE PATIENT CONFIRMATION -->
+    <!-- <div
+      class="
+        absolute
+        top-1/4
+        left-1/2
+        transform
+        -translate-x-1/2 -translate-y-1/2
+        bg-white
+        w-1/4
+        h-32
+        border-black
+        rounded-xl
+        border
+        text-center
+        p-8
+        shadow
+      "
+    >
+      <div>Are you sure you want to delete?</div>
+
+      <div class="flex gap-2 w-full">
+        <button
+          class="
+            bg-red-700
+            hover:bg-red-600
+            text-white
+            font-bold
+            block
+            py-2
+            px-10
+            mt-3
+            ml-10
+            mr-5
+            rounded
+          "
+        >
+          No
+        </button>
+
+        <button
+          class="
+            bg-blue-700
+            hover:bg-blue-600
+            text-white
+            font-bold
+            py-2
+            px-10
+            mt-3
+            rounded
+          "
+        >
+          Yes
+        </button>
+      </div>
+    </div> -->
   </div>
 </template>
 
@@ -330,6 +182,55 @@
 import Pagination from "../../components/Pagination.vue";
 export default {
   components: { Pagination },
+
+  data() {
+    return {
+      patients: [
+        {
+          id: 1,
+          name: "Honey Grace Friolo",
+          age: 21,
+          telephone: "09383069002",
+          date: "7/10/21",
+          address: "Aguada",
+          complain: "Sensitivity",
+          procedure: "Extraction",
+        },
+        {
+          id: 2,
+          name: "Honey Grace Friolo",
+          age: 21,
+          telephone: "09383069002",
+          date: "7/10/21",
+          address: "Aguada",
+          complain: "Sensitivity",
+          procedure: "Extraction",
+        },
+        {
+          id: 3,
+          name: "Honey Grace Friolo",
+          age: 21,
+          telephone: "09383069002",
+          date: "7/10/21",
+          address: "Aguada",
+          complain: "Sensitivity",
+          procedure: "Extraction",
+        },
+        {
+          id: 4,
+          name: "Honey Grace Friolo",
+          age: 21,
+          telephone: "09383069002",
+          date: "7/10/21",
+          address: "Aguada",
+          complain: "Sensitivity",
+          procedure: "Extraction",
+        },
+      ],
+    };
+  },
+
+  methods: {},
 };
 </script>
 

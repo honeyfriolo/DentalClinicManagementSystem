@@ -14,7 +14,7 @@
         uppercase
         w-full w-full
       "
-    > <n-link to="/dashboard">patients</n-link>
+    > <NuxtLink to="/dashboard/patients">patients</NuxtLink>
   
     </button>
     <button
@@ -32,7 +32,7 @@
         w-full
       "
     >
-      <n-link to="/dashboard/inventory"> inventory </n-link>
+      <NuxtLink to="/dashboard/inventory"> inventory </NuxtLink>
     </button>
     <button
       class="
@@ -49,7 +49,7 @@
         w-full
       "
     >
-      <n-link to="/dashboard/settings"> settings </n-link>
+      <NuxtLink to="/dashboard/settings"> settings </NuxtLink>
     </button>
     <button
       class="
@@ -66,7 +66,7 @@
         w-full
       "
     >
-      <n-link to=""> logout </n-link>
+      <NuxtLink to=""> logout </NuxtLink>
     </button>
 
     <!-- Log out Confirmation -->

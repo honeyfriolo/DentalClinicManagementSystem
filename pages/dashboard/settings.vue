@@ -1,15 +1,37 @@
 <template>
   <div class="flex relative">
-    <Sidemenu/>
+    <Sidemenu />
     <div class="w-9/12 mx-auto">
       <h3 class="italic uppercase mt-5 border-b block">account information</h3>
       <div>
-          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-right">
-  Edit Info
-</button>
-     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded float-left">
- Save Info
-</button>
+        <button
+          class="
+            bg-blue-500
+            hover:bg-blue-700
+            text-white
+            font-bold
+            py-2
+            px-4
+            rounded
+            float-right
+          "
+        >
+          Edit Info
+        </button>
+        <button
+          class="
+            bg-blue-500
+            hover:bg-blue-700
+            text-white
+            font-bold
+            py-2
+            px-4
+            rounded
+            float-left
+          "
+        >
+          Save Info
+        </button>
       </div>
       <div class="mt-8">
         <form class="w-full max-w-sm">
@@ -144,7 +166,7 @@
         border border-black
       "
     >
-     Updated Successfully!
+      Updated Successfully!
     </div>
   </div>
 </template>

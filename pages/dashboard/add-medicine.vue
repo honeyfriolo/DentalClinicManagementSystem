@@ -1,11 +1,11 @@
 <template>
   <div class="flex">
-   <Sidemenu/>
+    <Sidemenu />
 
     <div class="w-9/12 mx-auto">
       <h3 class="italic uppercase mt-5 border-b block">Add Medicine</h3>
 
-<!-- Forms -->
+      <!-- Forms -->
       <div class="py-10">
         <form class="w-full max-w-lg">
           <div class="flex flex-wrap -mx-3 mb-6">
@@ -144,7 +144,7 @@
         </form>
       </div>
 
-<!-- Buttons -->
+      <!-- Buttons -->
       <div class="flex pl-24">
         <button
           class="

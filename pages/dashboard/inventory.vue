@@ -1,10 +1,9 @@
 <template>
   <div class="flex relative">
-       <Sidemenu/>
-
+    <Sidemenu />
 
     <div class="w-9/12 mx-auto text-center mt-20">
-    <!-- Search Bar -->
+      <!-- Search Bar -->
       <div
         class="relative flex w-80 h-9 float-right flex-wrap items-stretch mb-3"
       >
@@ -60,20 +59,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="h-10">
-            <td>Chlorhexidine</td>
-            <td>Antibiotic</td>
-            <td>Available</td>
-          </tr>
-          <tr class="h-10">
-            <td>Tetracyclines</td>
-            <td>Antibiotic</td>
-            <td>Not Available</td>
-          </tr>
-          <tr class="h-10">
-            <td>Anesthesia</td>
-            <td>Pain Reliever</td>
-            <td>Available</td>
+          <tr class="h-10" v-for="(medicine, index) in inventory" :key="index">
+            <td>{{ medicine.medicineName }}</td>
+            <td>{{ medicine.description }}</td>
+            <td>{{ medicine.stockStatus }}</td>
+            <td>
+              <i class="fa fa-trash p-3"></i>
+              <i class="fa fa-edit p-3"></i>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -101,8 +94,8 @@
       </div>
     </div>
 
-<!-- Delete Medicine Confirmation-->
-    <div
+    <!-- Delete Medicine Confirmation-->
+    <!-- <div
       class="
         absolute
         top-1/4
@@ -156,10 +149,11 @@
           Yes
         </button>
       </div>
-    </div>
+    </div> -->
 
-<!-- Deleted Successfully! -->
-    <div class="
+    <!-- Deleted Successfully! -->
+    <div
+      class="
         login
         absolute
         top-5
@@ -171,11 +165,11 @@
         px-28
         rounded-2xl
         mt-16
-        border
-        border-black
-      ">Deleted Successfully!</div>
-
-
+        border border-black
+      "
+    >
+      Deleted Successfully!
+    </div>
   </div>
 </template>
 
@@ -183,6 +177,32 @@
 import Pagination from "../../components/Pagination.vue";
 export default {
   components: { Pagination },
+  data() {
+    return {
+      inventory: [
+        {
+          medicineName: "Chlorhexidine",
+          description: "Antibiotic",
+          stockStatus: "Available",
+        },
+        {
+          medicineName: "Chlorhexidine",
+          description: "Antibiotic",
+          stockStatus: "Available",
+        },
+        {
+          medicineName: "Chlorhexidine",
+          description: "Antibiotic",
+          stockStatus: "Available",
+        },
+        {
+          medicineName: "Chlorhexidine",
+          description: "Antibiotic",
+          stockStatus: "Available",
+        },
+      ],
+    };
+  },
 };
 </script>
 

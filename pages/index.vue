@@ -5,7 +5,7 @@
     </h1>
     <Login/>
     <!-- <Register /> -->
-    <Sidemenu/>
+    
   </div>
 </template>
 
