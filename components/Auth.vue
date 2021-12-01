@@ -84,17 +84,18 @@
       "
       v-if="registerModal"
     >
-      <form action="">
+      <form @submit.prevent="submit">
         <input
+          
           type="email"
           id="email"
           name="email"
           value=""
           placeholder="Email"
           class="border-b block border-black pb-3 w-full p-2"
-          
         />
         <input
+          
           type="text"
           id="username"
           name="username"
@@ -103,6 +104,7 @@
           class="border-b block border-black pb-3 mt-5 w-full p-2"
         />
         <input
+          
           type="password"
           id="password"
           name="password"
@@ -111,6 +113,7 @@
           class="border-b block border-black pb-3 mt-5 w-full p-2"
         />
         <input
+         
           type="password"
           id="re-type-password"
           name="password"
@@ -165,15 +168,42 @@ export default {
     return {
       loginModal: true, //loginModal ma view
       registerModal: false, //register kay hide pa
-      loading: false
+      loading: false,
+
+      users: {
+        email: '',
+        username: '',
+        password: '',
+        retypePassword: '',
+      },
     };
   },
 
   methods: {
+    async submit() {
+      await fetch({
+        input: "http://localhost:3000/api",
+        init: {
+          methods: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            users: {
+              email: "joseph@test.com",
+              username: "test1",
+              password: "123",
+              retypePassword: "123",
+            },
+          }),
+        },
+      });
+
+      await this.$router.push("/");
+      console.log(this.users);
+    },
+
     toggleAuth() {
       this.loginModal = !this.loginModal; //ma reverse siya
       this.registerModal = !this.registerModal; // reverse siya or baik
-      this.$router.push('/')
     },
   },
 };
