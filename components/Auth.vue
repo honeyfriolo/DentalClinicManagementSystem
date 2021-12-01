@@ -23,10 +23,7 @@
           value=""
           placeholder="Username"
           class="border-b block border-black p-3 w-full"
-
-         v-model="userInfo.username"
-          :rules="[required('username')]"
-          v-if="hasUsername" />
+        />
         <input
           type="password"
           id="password"
@@ -34,13 +31,6 @@
           value=""
           placeholder="Password"
           class="border-b block border-black p-3 mt-5 w-full"
-
-         :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-         @click:append="showPassword = !showPassword" 
-         counter=true
-          v-model="userInfo.password"
-          :rules="[required('password'), minLength('password', 8)]"
-          
         />
 
         <button
@@ -57,7 +47,6 @@
             mx-auto
             mt-5
           "
-            @click="signUp(userInfo)" :disabled = "!valid" :signUp="loginUser"
         >
           log in
         </button>
@@ -103,7 +92,7 @@
           value=""
           placeholder="Email"
           class="border-b block border-black pb-3 w-full p-2"
-          \
+          
         />
         <input
           type="text"
@@ -120,8 +109,6 @@
           value=""
           placeholder="Password"
           class="border-b block border-black pb-3 mt-5 w-full p-2"
-         
-          
         />
         <input
           type="password"
@@ -130,7 +117,6 @@
           value=""
           placeholder="Re-type Password"
           class="border-b block border-black pb-3 mt-5 w-full p-2"
-         
         />
 
         <div class="flex gap-2">
@@ -165,7 +151,6 @@
               mx-auto
               mt-5
             "
-          
           >
             sign up
           </button>
@@ -180,28 +165,16 @@ export default {
     return {
       loginModal: true, //loginModal ma view
       registerModal: false, //register kay hide pa
-   
-        valid: false,
-        showPassword: false,
-        userInfo: {
-            username:'',
-            password:''
-        },
-       // ...validations
-    }
-  
+      loading: false
+    };
   },
-  props: ["signUp","buttonText","hasUsername"],
+
   methods: {
     toggleAuth() {
       this.loginModal = !this.loginModal; //ma reverse siya
       this.registerModal = !this.registerModal; // reverse siya or baik
-   
-    
-   },
-     loginUser (){
-        alert('you pressed a button')
-      }
+      this.$router.push('/')
+    },
   },
 };
 </script>

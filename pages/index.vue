@@ -8,8 +8,8 @@
     </div>
     <!-- <Login/> -->
     <!-- <Register /> -->
-  <!-- <Auth /> -->
-    <Me />
+  <Auth />
+    
     
   </div>
 </template>
