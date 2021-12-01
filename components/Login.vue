@@ -21,7 +21,7 @@
           name="username"
           value=""
           placeholder="Username"
-          class="border-b block border-black pb-3 w-full"
+          class="border-b block border-black p-3 w-full"
         />
         <input
           type="password"
@@ -29,7 +29,7 @@
           name="password"
           value=""
           placeholder="Password"
-          class="border-b block border-black pb-3 mt-5 w-full"
+          class="border-b block border-black p-3 mt-5 w-full"
         />
 
         <button

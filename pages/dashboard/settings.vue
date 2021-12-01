@@ -15,6 +15,7 @@
             rounded
             float-right
           "
+        
         >
           Edit Info
         </button>
@@ -172,7 +173,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+};
 </script>
 
 <style>
