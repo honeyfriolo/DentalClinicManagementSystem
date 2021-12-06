@@ -191,49 +191,8 @@ export default {
 
   data() {
     return {
-      patients: [
-        {
-          id: 1,
-          name: "Honey Grace Friolo",
-          age: 21,
-          telephone: "09383069002",
-          date: "7/10/21",
-          address: "Aguada",
-          complain: "Sensitivity",
-          procedure: "Extraction",
-        },
-        {
-          id: 2,
-          name: "Honey Grace Friolo",
-          age: 21,
-          telephone: "09383069002",
-          date: "7/10/21",
-          address: "Aguada",
-          complain: "Sensitivity",
-          procedure: "Extraction",
-        },
-        {
-          id: 3,
-          name: "Honey Grace Friolo",
-          age: 21,
-          telephone: "09383069002",
-          date: "7/10/21",
-          address: "Aguada",
-          complain: "Sensitivity",
-          procedure: "Extraction",
-        },
-        {
-          id: 4,
-          name: "Honey Grace Friolo",
-          age: 21,
-          telephone: "09383069002",
-          date: "7/10/21",
-          address: "Aguada",
-          complain: "Sensitivity",
-          procedure: "Extraction",
-        },
-      ],
-      toggleModal: false,
+     patients: [],
+     toggleModal: false,
     };
   },
 
@@ -241,6 +200,10 @@ export default {
     toggleBtn() {
       this.toggleModal = !this.toggleModal;
     },
+    
+    async patients(){
+      await GET('localhost:3000/store/data/patients')
+    }  
   },
 };
 </script>
