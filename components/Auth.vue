@@ -200,7 +200,7 @@ export default {
         },
       });
 
-      await this.$router.push("/");
+      // await this.$router.push("/");
       console.log(this.users);
     },
 

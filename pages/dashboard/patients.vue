@@ -1,5 +1,7 @@
 <template>
-  <div class="flex relative">
+  <div>
+    <div class="bg-black h-8"></div>
+    <div class="flex relative">
     <Sidemenu />
     <div class="w-9/12 mx-auto text-center mt-20">
       <div
@@ -180,7 +182,8 @@
         </button>
       </div>
     </div>
-    -->
+  
+  </div>
   </div>
 </template>
 
