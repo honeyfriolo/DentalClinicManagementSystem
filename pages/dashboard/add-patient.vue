@@ -1,4 +1,6 @@
 <template>
+<div>
+    <div class="bg-black h-8"></div>
   <div class="flex">
     <Sidemenu />
 
@@ -314,6 +316,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>

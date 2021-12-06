@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-blue-300 w-2/12 h-screen pt-10">
+
+    <div class="bg-blue-300 w-2/12 h-screen pt-10 transform translate-y-0 translate-x-0 ">
     <button
       class="
         bg-transparent
@@ -130,6 +131,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>

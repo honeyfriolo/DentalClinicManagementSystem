@@ -1,4 +1,6 @@
 <template>
+<div>
+    <div class="bg-black h-8"></div>
   <div class="flex relative">
     <Sidemenu />
 
@@ -174,6 +176,7 @@
       Deleted Successfully!
     </div>
   </div>
+</div>
 </template>
 
 <script>
