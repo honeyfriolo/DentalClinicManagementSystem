@@ -1,35 +1,35 @@
 <template>
-  <div v-if="isAuthenticated">
+  <div>
     <div class="bg-black h-8"></div>
     <div class="flex relative">
-    <Sidemenu />
-    <div class="w-9/12 mx-auto">
+      <Sidemenu />
+      <div class="w-9/12 mx-auto">
         <h3 class="italic uppercase mt-5 border-b block">
-        account information
+          account information
         </h3>
         <div>
-        <NuxtLink
-            to="/dashboard/edit-account"
+          <NuxtLink to="/dashboard/edit-account"
             class="
-            bg-blue-500
-            hover:bg-blue-700
-            text-white
-            font-bold
-            py-2
-            px-4
-            rounded
-            float-right
+              bg-blue-500
+              hover:bg-blue-700
+              text-white
+              font-bold
+              py-2
+              px-4
+              rounded
+              float-right
             "
-        >
+          >
             Edit Info
-        </NuxtLink>
+          </NuxtLink>
+          
         </div>
         <div class="mt-8">
-        <form class="w-full max-w-sm">
+          <form class="w-full max-w-sm">
             <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3">
+              <div class="md:w-1/3">
                 <label
-                class="
+                  class="
                     block
                     text-gray-500
                     font-bold
@@ -37,15 +37,15 @@
                     mb-1
                     md:mb-0
                     pr-4
-                "
-                for="email"
+                  "
+                  for="email"
                 >
-                Email
+                  Email
                 </label>
-            </div>
-            <div class="md:w-2/3">
+              </div>
+              <div class="md:w-2/3">
                 <input
-                class="
+                  class="
                     bg-gray-200
                     appearance-none
                     border-2 border-gray-200
@@ -56,18 +56,18 @@
                     text-gray-700
                     leading-tight
                     focus:outline-none focus:bg-white focus:border-purple-500
-                "
-                id="inline-full-name"
-                type="text"
-                value="rubengerong@gmail.com"
+                  "
+                  id="inline-full-name"
+                  type="text"
+                  value="rubengerong@gmail.com"
                 />
-            </div>
+              </div>
             </div>
 
             <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3">
+              <div class="md:w-1/3">
                 <label
-                class="
+                  class="
                     block
                     text-gray-500
                     font-bold
@@ -75,15 +75,15 @@
                     mb-1
                     md:mb-0
                     pr-4
-                "
-                for="Username"
+                  "
+                  for="Username"
                 >
-                Username
+                  Username
                 </label>
-            </div>
-            <div class="md:w-2/3">
+              </div>
+              <div class="md:w-2/3">
                 <input
-                class="
+                  class="
                     bg-gray-200
                     appearance-none
                     border-2 border-gray-200
@@ -94,17 +94,17 @@
                     text-gray-700
                     leading-tight
                     focus:outline-none focus:bg-white focus:border-purple-500
-                "
-                id="username"
-                type="text"
-                value="Admin"
+                  "
+                  id="username"
+                  type="text"
+                  value="Admin"
                 />
-            </div>
+              </div>
             </div>
             <div class="md:flex md:items-center mb-6">
-            <div class="md:w-1/3">
+              <div class="md:w-1/3">
                 <label
-                class="
+                  class="
                     block
                     text-gray-500
                     font-bold
@@ -112,15 +112,15 @@
                     mb-1
                     md:mb-0
                     pr-4
-                "
-                for="inline-password"
+                  "
+                  for="inline-password"
                 >
-                Password
+                  Password
                 </label>
-            </div>
-            <div class="md:w-2/3">
+              </div>
+              <div class="md:w-2/3">
                 <input
-                class="
+                  class="
                     bg-gray-200
                     appearance-none
                     border-2 border-gray-200
@@ -131,48 +131,42 @@
                     text-gray-700
                     leading-tight
                     focus:outline-none focus:bg-white focus:border-purple-500
-                "
-                id="inline-password"
-                type="password"
-                placeholder="********"
+                  "
+                  id="inline-password"
+                  type="password"
+                  placeholder="********"
                 />
+                
+              </div>
             </div>
-            </div>
-        </form>
+          </form>
         </div>
-    </div>
-    <div
+      </div>
+      <div
         class="
-        login
-        absolute
-        top-5
-        left-1/2
-        transform
-        -translate-x-1/2 -translate-y-1/2
-        bg-white
-        p-1.5
-        px-28
-        rounded-2xl
-        mt-16
-        border border-black
+          login
+          absolute
+          top-5
+          left-1/2
+          transform
+          -translate-x-1/2 -translate-y-1/2
+          bg-white
+          p-1.5
+          px-28
+          rounded-2xl
+          mt-16
+          border border-black
         "
-    >
+      >
         Updated Successfully!
-    </div>
+      </div>
     </div>
   </div>
 </template>
-<script>
-import { mapGetters } from "vuex";
 
+<script>
 export default {
-  middleware: "auth",
-  computed: {
-    ...mapGetters(["isAuthenticated"]),
-  },
-  data() {
-    return {};
-  },
+  middleware: 'auth',
 };
 </script>
 

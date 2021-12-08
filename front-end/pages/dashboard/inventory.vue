@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="isAuthenticated">
     <div class="bg-black h-8"></div>
     <div class="flex relative">
       <Sidemenu />
@@ -191,25 +191,26 @@
     </div>
   </div>
 </template>
-
 <script>
-import Pagination from "../../components/Pagination.vue";
+// import Pagination from "../../components/Pagination.vue";
 import inventory from "~/static/js/inventory.json";
+import { mapGetters } from "vuex";
 
 export default {
-  middleware: 'auth',
-
-  components: { Pagination },
+  middleware: "auth",
+    // components: { Pagination },
   asyncData({ params }) {
     return { inventory };
   },
-
+  computed: {
+    ...mapGetters(["isAuthenticated"]),
+  },
   data() {
     return {
-      toggleModal: false,
+        toggleModal: false,
     };
   },
-  methods: {
+    methods: {
     toggleBtn() {
       this.toggleModal = !this.toggleModal;
     },
@@ -218,4 +219,4 @@ export default {
 </script>
 
 <style>
-</style>    
+</style>

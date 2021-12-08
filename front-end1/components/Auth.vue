@@ -19,20 +19,20 @@
         <input
           type="text"
           name="username"
-          v-model="username"
+          v-model="loginUser.username"
           placeholder="Username"
           class="border-b block border-black p-3 w-full"
         />
         <input
           type="password"
           name="password"
-          v-model="password"
+          v-model="loginUser.password"
           placeholder="Password"
           class="border-b block border-black p-3 mt-5 w-full"
         />
 
         <button
-        type="submit"
+          type="submit"
           class="
             bg-blue-500
             hover:bg-blue-700
@@ -68,6 +68,7 @@
         </div>
       </form>
     </div>
+    <!-- REGISTER PART -->
     <div
       class="
         login
@@ -83,46 +84,39 @@
       "
       v-if="registerModal"
     >
-
-    
-<!-- REGISTER PART -->
-  <div class="notification is-danger" v-if="error">
-    {{ error }}
-  </div>
+      <div class="notification is-danger" v-if="error">
+        {{ error }}
+      </div>
 
       <form method="post" @submit.prevent="register">
         <input
-          
           type="email"
           name="email"
-          v-model="email"
+          v-model="users.email"
           placeholder="Email"
           class="border-b block border-black pb-3 w-full p-2"
           required
         />
         <input
-          
           type="text"
           name="username"
-          v-model="username"
+          v-model="users.username"
           placeholder="Username"
           class="border-b block border-black pb-3 mt-5 w-full p-2"
           required
         />
         <input
-          
           type="password"
           name="password"
-          v-model="password"
+          v-model="users.password"
           placeholder="Password"
           class="border-b block border-black pb-3 mt-5 w-full p-2"
           required
         />
         <input
-         
           type="password"
           name="password"
-          v-model="reTypePassword"
+          v-model="users.reTypePassword"
           placeholder="Re-type Password"
           class="border-b block border-black pb-3 mt-5 w-full p-2"
           required
@@ -147,7 +141,7 @@
             CANCEL
           </button>
           <button
-          type="submit"
+            type="submit"
             class="
               bg-blue-500
               hover:bg-blue-700
@@ -171,7 +165,7 @@
 </template>
 <script>
 export default {
-
+  middleware: "guest",
   data() {
     return {
       loginModal: true, //loginModal ma view
@@ -179,65 +173,64 @@ export default {
       loading: false,
 
       users: {
-        email: '',
-        username: '',
-        password: '',
-        reTypePassword: '',
-        error: null
+        email: "",
+        username: "",
+        password: "",
+        reTypePassword: "",
+        error: null,
       },
 
       loginUser: {
-        username: '',
-        password: '',
-        error: null
-      }
+        username: "",
+        password: "",
+        error: null,
+      },
     };
   },
 
   methods: {
     async register() {
       try {
-        await this.$axios.post('register', {
+        await this.$axios.post("register", {
           email: this.users.email,
           username: this.users.username,
           password: this.users.password,
           reTypePassword: this.users.reTypePassword,
-        })
+        });
 
-        await this.$auth.loginWith('local', {
+        await this.$auth.loginWith("local", {
           data: {
-          email: this.users.email,
-          password: this.users.password
+            email: this.users.email,
+            password: this.users.password,
           },
-        })
+        });
 
-        this.$router.push('/')
+        this.$router.push("/");
       } catch (e) {
-        this.error = e.response.data.message
+        this.error = e.response.data.message;
       }
     },
 
     async login() {
       try {
-        await this.$auth.loginWith('local', {
+        await this.$auth.loginWith("local", {
           data: {
-          email: this.loginUser.email,
-          password: this.loginUser.password
-          }
-        })
+            email: this.loginUser.email,
+            password: this.loginUser.password,
+          },
+        });
 
-        this.$router.push('/dashboard/patients')
+        this.$router.push("/dashboard/patients");
       } catch (e) {
-        this.error = e.response.data.message
+        this.error = e.response.data.message;
       }
     },
-  
 
     toggleAuth() {
       this.loginModal = !this.loginModal; //ma reverse siya
       this.registerModal = !this.registerModal; // reverse siya or baik
     },
-  }
+  },
 };
 </script>
  

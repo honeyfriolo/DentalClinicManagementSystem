@@ -195,17 +195,18 @@
     </div>
   </div>
 </template>
+
 <script>
-// import Pagination from "../../components/Pagination.vue";
+import Pagination from "../../components/Pagination.vue";
 import patients from "~/static/js/patients.json";
 import { mapGetters } from "vuex";
-
 export default {
   middleware: 'auth',
   asyncData({ params }) {
     return { patients };
   },
-    // components: { Pagination },
+
+  components: { Pagination },
   computed: {
     ...mapGetters(["isAuthenticated"]),
   },

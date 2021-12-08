@@ -1,6 +1,6 @@
 <template>
-  <div v-if="isAuthenticated">
-          <div class="bg-black h-8"></div>
+<div>
+    <div class="bg-black h-8"></div>
   <div class="flex">
     <Sidemenu />
 
@@ -316,20 +316,14 @@
       </div>
     </div>
   </div>
-  </div>
+</div>
 </template>
+
 <script>
-import { mapGetters } from "vuex";
-// import Pagination from "../../components/Pagination.vue";
+import Pagination from "../../components/Pagination.vue";
 export default {
-  middleware: "auth",
-//   components: { Pagination },
-  computed: {
-    ...mapGetters(["isAuthenticated"]),
-  },
-  data() {
-    return {};
-  },
+  middleware: 'auth',
+  components: { Pagination },
 };
 </script>
 

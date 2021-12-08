@@ -1,9 +1,11 @@
 <template>
-  <div v-if="isAuthenticated">
+  <div>
     <div class="bg-black h-8"></div>
     <div class="flex relative">
       <Sidemenu />
+
       <div class="w-9/12 mx-auto text-center mt-20">
+        <!-- Search Bar -->
         <div
           class="
             relative
@@ -39,7 +41,7 @@
           </span>
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Search Medicine"
             class="
               px-2
               py-1
@@ -57,30 +59,25 @@
             "
           />
         </div>
+        <!-- Table -->
         <table class="border border-black w-full">
           <thead>
             <tr class="h-10 text-center border border-black">
-              <th class="w-20">ID</th>
-              <th>Patient's Name</th>
-              <th>Age</th>
-              <th>Telephone</th>
-              <th>Date</th>
-              <th>Address</th>
-              <th>Complain</th>
-              <th>Procedure</th>
+              <th class="w-56">Medicine Name</th>
+              <th>Description</th>
+              <th>Stock Status</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="h-10" v-for="(patient, index) in patients" :key="index">
-              <td>{{ patient.id }}</td>
-              <td>{{ patient.name }}</td>
-              <td>{{ patient.age }}</td>
-              <td>{{ patient.telephone }}</td>
-              <td>{{ patient.date }}</td>
-              <td>{{ patient.address }}</td>
-              <td>{{ patient.complain }}</td>
-              <td>{{ patient.procedure }}</td>
+            <tr
+              class="h-10"
+              v-for="(medicine, index) in inventory"
+              :key="index"
+            >
+              <td>{{ medicine.medicineName }}</td>
+              <td>{{ medicine.description }}</td>
+              <td>{{ medicine.stockStatus }}</td>
               <td>
                 <i class="fa fa-trash p-3" @click="toggleBtn()"></i>
                 <i class="fa fa-edit p-3"></i>
@@ -90,8 +87,7 @@
         </table>
         <Pagination />
         <div>
-          <NuxtLink to="/dashboard/add-patient"
-          
+          <NuxtLink to="/dashboard/add-medicine"
             class="
               mt-20
               hover:text-blue-500 hover:border-blue-500
@@ -108,32 +104,12 @@
               bg-blue-500
             "
           >
-            Add Patient
+            Add Medicine
           </NuxtLink>
         </div>
       </div>
 
-      <!-- ADDED SUCCESSFULLY-->
-      <div
-        class="
-          login
-          absolute
-          top-5
-          left-1/2
-          transform
-          -translate-x-1/2 -translate-y-1/2
-          bg-white
-          p-1.5
-          px-28
-          rounded-2xl
-          mt-16
-          border border-black
-        "
-      >
-        Added Successfully!
-      </div>
-
-      <!-- DELETE PATIENT CONFIRMATION -->
+      <!-- Delete Medicine Confirmation-->
       <div
         class="
           absolute
@@ -192,29 +168,47 @@
           </button>
         </div>
       </div>
+
+      <!-- Deleted Successfully! -->
+      <div
+        class="
+          login
+          absolute
+          top-5
+          left-1/2
+          transform
+          -translate-x-1/2 -translate-y-1/2
+          bg-white
+          p-1.5
+          px-28
+          rounded-2xl
+          mt-16
+          border border-black
+        "
+      >
+        Deleted Successfully!
+      </div>
     </div>
   </div>
 </template>
+
 <script>
-// import Pagination from "../../components/Pagination.vue";
-import patients from "~/static/js/patients.json";
-import { mapGetters } from "vuex";
+import Pagination from "../../components/Pagination.vue";
+import inventory from "~/static/js/inventory.json";
 
 export default {
   middleware: 'auth',
+
+  components: { Pagination },
   asyncData({ params }) {
-    return { patients };
+    return { inventory };
   },
-    // components: { Pagination },
-  computed: {
-    ...mapGetters(["isAuthenticated"]),
-  },
+
   data() {
     return {
       toggleModal: false,
     };
   },
-
   methods: {
     toggleBtn() {
       this.toggleModal = !this.toggleModal;
@@ -224,4 +218,4 @@ export default {
 </script>
 
 <style>
-</style>
+</style>    

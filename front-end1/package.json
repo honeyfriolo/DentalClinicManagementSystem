@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-auth",
+  "name": "DCMS",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,8 +10,16 @@
   },
   "dependencies": {
     "@nuxtjs/auth": "^4.5.1",
+    "@nuxtjs/auth-next": "5.0.0-1637745161.ea53f98",
     "@nuxtjs/axios": "^5.3.1",
+    "@nuxtjs/style-resources": "^1.2.1",
     "core-js": "^3.15.1",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "sass": "^1.43.4",
+    "sass-loader": "10.1.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^4.2.0",
+    "postcss": "^8.3.5"
   }
 }

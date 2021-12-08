@@ -1,22 +1,24 @@
 <template>
-  <div class="bg-dental w-full h-screen relative">
-    <h1 class="text-4xl text-center pt-20 w-5/12 mx-auto">
-      Welcome to Dr. Gerong’s Dental Clinic Management System
-    </h1>
-    <Auth />
+  <div>
+    <div class="navbar-item has-dropdown is-hoverable" v-if="isAuthenticated">
+      <a class="navbar-item" @click="logout">Logout</a>
+
+      mao ni home
+    </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  middleware: "guest",
+  computed: {
+    ...mapGetters(["isAuthenticated"]),
+  },
+  methods: {
+    async logout() {
+      await this.$auth.logout();
+    },
+  },
 };
 </script>
- 
-<style lang="scss" scoped>
-.bg-dental {
-  background: url("~/static/bg/dentalbg.jpg");
-  background-size: 100% 100%;
-}
-</style>
-
