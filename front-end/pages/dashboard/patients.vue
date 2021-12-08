@@ -201,6 +201,7 @@ import Pagination from "../../components/Pagination.vue";
 import patients from "~/static/js/patients.json";
 
 export default {
+  middleware: 'auth',
   asyncData({ params }) {
     return { patients };
   },

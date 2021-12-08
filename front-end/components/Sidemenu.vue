@@ -106,7 +106,7 @@
             rounded
             whitespace-nowrap
           "
-          @click="toggleBtn"
+          @click="logout"
         >
           Log Out
         </button>
@@ -144,6 +144,10 @@ export default {
   methods: {
     toggleBtn() {
       this.toggleModal = !this.toggleModal;
+    },
+
+    async logout() {
+      await this.$auth.logout();
     },
   },
 };

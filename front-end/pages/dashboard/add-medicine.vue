@@ -188,6 +188,7 @@
 <script>
 import Pagination from "../../components/Pagination.vue";
 export default {
+  middleware: 'auth',
   components: { Pagination },
 };
 </script>

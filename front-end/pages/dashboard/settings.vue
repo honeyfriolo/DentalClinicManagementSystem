@@ -165,7 +165,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  middleware: 'auth',
+};
 </script>
 
 <style>

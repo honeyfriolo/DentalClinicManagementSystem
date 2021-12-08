@@ -3,19 +3,14 @@
     <h1 class="text-4xl text-center pt-20 w-5/12 mx-auto">
       Welcome to Dr. Gerong’s Dental Clinic Management System
     </h1>
-    <div v-if="$auth.loggedIn">
-      {{ $auth.user.email}}
-    </div>
-    <!-- <Login/> -->
-    <!-- <Register /> -->
-  <Auth />
-    
-    
+    <Auth />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  middleware: "guest",
+};
 </script>
  
 <style lang="scss" scoped>

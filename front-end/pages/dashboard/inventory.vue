@@ -197,6 +197,8 @@ import Pagination from "../../components/Pagination.vue";
 import inventory from "~/static/js/inventory.json";
 
 export default {
+  middleware: 'auth',
+
   components: { Pagination },
   asyncData({ params }) {
     return { inventory };
