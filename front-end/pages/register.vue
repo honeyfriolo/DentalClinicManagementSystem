@@ -1,60 +1,106 @@
 <template>
-  <section class="section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-4 is-offset-4">
-          <h2 class="title has-text-centered">Register!</h2>
-
-          <div class="notification is-danger" v-if="error">
+  <section class="section bg-dental h-screen">
+    <div>
+      <div>
+        <div>
+          <div
+            class="text-center text-red-500 font-bold mt-5 text-xl"
+            v-if="error"
+          >
             {{ error }}
           </div>
-
-          <form method="post" @submit.prevent="register">
-            <div class="field">
-              <label class="label">Username</label>
-              <div class="control">
+          <div
+            class="
+              absolute
+              top-1/3
+              left-1/2
+              transform
+              -translate-x-1/2 -translate-y-1/2
+              border border-color
+              bg-white
+              p-5
+              rounded-lg
+              mt-16
+              w-3/12
+              shadow-2xl
+            "
+          >
+            <form method="post" @submit.prevent="register">
+              <div class="flex items-center border-b border-teal-500 py-2">
                 <input
                   type="text"
-                  class="input"
+                  class="p-2 l-auto w-full"
                   name="username"
                   v-model="username"
+                  placeholder="Username"
                   required
                 />
               </div>
-            </div>
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control">
+
+              <div class="flex items-center border-b border-teal-500 py-2">
                 <input
                   type="email"
-                  class="input"
+                  class="p-2 l-auto w-full"
                   name="email"
                   v-model="email"
+                  placeholder="Email"
                   required
                 />
               </div>
-            </div>
-            <div class="field">
-              <label class="label">Password</label>
-              <div class="control">
+
+              <div class="flex items-center border-b border-teal-500 py-2">
                 <input
                   type="password"
-                  class="input"
+                  class="p-2 l-auto w-full"
                   name="password"
                   v-model="password"
+                  placeholder="Password"
                   required
                 />
               </div>
-            </div>
-            <div class="control">
-              <button type="submit" class="button is-dark is-fullwidth">
-                Register
-              </button>
-            </div>
-          </form>
 
-          <div class="has-text-centered" style="margin-top: 20px">
-            Already got an account? <nuxt-link to="/login">Login</nuxt-link>
+              <!-- <div class="flex items-center border-b border-teal-500 py-2">
+                <input
+                  type="password"
+                  class="p-2 l-auto w-full"
+                  name="reTypepassword"
+                  v-model="reTypepassword"
+                  placeholder="Re-type Password"
+                  required
+                />
+              </div> -->
+
+              <div class="flex space-x-8 w-min mx-auto mt-5">
+                <nuxt-link
+                  to="/login"
+                  class="
+                    bg-red-500
+                    hover:bg-red-700
+                    text-white
+                    font-bold
+                    py-3
+                    px-10
+                    rounded-full
+                  "
+                >
+                  Cancel</nuxt-link>
+
+                <button
+                  type="submit"
+                  class="
+                    bg-blue-500
+                    hover:bg-blue-700
+                    text-white
+                    font-bold
+                    py-3
+                    px-10
+                    rounded-full
+                  "
+                >
+                  Register
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -71,6 +117,7 @@ export default {
       username: "",
       email: "",
       password: "",
+      reTypepassword: "",
       error: null,
     };
   },
@@ -82,7 +129,10 @@ export default {
           username: this.username,
           email: this.email,
           password: this.password,
+          reTypepassword: this.reTypepassword,
         });
+
+        console.log("register");
 
         await this.$auth.loginWith("local", {
           data: {
@@ -91,7 +141,7 @@ export default {
           },
         });
 
-        this.$router.push("/");
+        this.$router.push("/login");
       } catch (e) {
         this.error = e.response.data.message;
       }
@@ -99,3 +149,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.bg-dental {
+  background: url("~/static/bg/dentalbg.jpg");
+  background-size: 100% 100%;
+}
+</style>
