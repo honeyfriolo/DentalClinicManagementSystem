@@ -17,7 +17,7 @@
               transform
               -translate-x-1/2 -translate-y-1/2
               border border-color
-              bg-white
+              bg-transparent
               p-5
               rounded-lg
               mt-16
@@ -26,7 +26,7 @@
             "
           >
             <form method="post" @submit.prevent="register">
-              <div class="flex items-center border-b border-teal-500 py-2">
+              <div class="flex items-center border-b border-teal-500  py-2">
                 <input
                   type="text"
                   class="p-2 l-auto w-full"
@@ -37,7 +37,7 @@
                 />
               </div>
 
-              <div class="flex items-center border-b border-teal-500 py-2">
+              <div class="flex items-center border-b border-teal-500 py-2 text-black">
                 <input
                   type="email"
                   class="p-2 l-auto w-full"
@@ -152,7 +152,7 @@ export default {
 
 <style lang="scss" scoped>
 .bg-dental {
-  background: url("~/static/bg/dentalbg.jpg");
+  background: url("~/static/bg/bg.jpg");
   background-size: 100% 100%;
 }
 </style>

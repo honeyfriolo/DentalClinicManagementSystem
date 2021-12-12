@@ -44,7 +44,7 @@ export default {
   build: {
   },
   axios: {
-    baseURL: 'http://127.0.0.1:9999/api'
+    baseURL: 'http://127.0.0.1:3333/api'
   },
 
   auth: {
