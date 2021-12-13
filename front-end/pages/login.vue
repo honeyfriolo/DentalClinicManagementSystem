@@ -17,7 +17,7 @@
               transform
               -translate-x-1/2 -translate-y-1/2
               border border-color
-              bg-white
+              bg-transparent
               p-5
               rounded-lg
               mt-16
@@ -82,8 +82,6 @@
 
 <script>
 export default {
-  middleware: "guest",
-
   data() {
     return {
       email: "",
@@ -113,7 +111,7 @@ export default {
 
 <style lang="scss" scoped>
 .bg-dental {
-  background: url("~/static/bg/dentalbg.jpg");
+  background: url("~/static/bg/bg.jpg");
   background-size: 100% 100%;
 }
 </style>
