@@ -83,7 +83,7 @@
               <td>{{ patient.procedure }}</td>
               <td>
                 <i class="fa fa-trash p-3" @click="toggleBtn()"></i>
-                <i class="fa fa-edit p-3"></i>
+                <NuxtLink to="/dashboard/edit-patient" class="fa fa-edit p-3"></NuxtLink> 
               </td>
             </tr>
           </tbody>

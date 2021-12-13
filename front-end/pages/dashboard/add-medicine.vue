@@ -282,7 +282,7 @@
       </div>
 
       <div class="flex pl-24">
-        <button
+        <NuxtLink to="/dashboard/inventory"
           class="
             bg-red-500
             hover:bg-red-700
@@ -296,7 +296,7 @@
           "
         >
           cancel
-        </button>
+        </NuxtLink>
         <button
           class="
             bg-blue-500
