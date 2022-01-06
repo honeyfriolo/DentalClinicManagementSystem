@@ -3,7 +3,8 @@
           <div class="bg-black h-8"></div>
   <div class="flex">
     <Sidemenu />
-<div class="w-9/12 mx-auto">
+
+   <div class="w-9/12 mx-auto">
       <h3 class="italic uppercase mt-5 border-b block">Add Medicine</h3>
 
       <!-- Forms -->
@@ -176,7 +177,7 @@
             mt-5
           "
         >
-          add
+          update
         </button>
       </div>
     </div>

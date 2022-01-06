@@ -329,7 +329,9 @@ export default {
     ...mapGetters(["isAuthenticated"]),
   },
   data() {
-    return {};
+    return {
+      
+    };
   },
 };
 </script>
