@@ -7,8 +7,14 @@ class PatientsSchema extends Schema {
   up () {
     this.create('patients', (table) => {
       table.increments()
+      table.string('name')
+      table.integer('age')
+      table.string('telephone')
+      table.string('date')
+      table.string('address')
+      table.string('complain')
+      table.string('pain')
       table.timestamps()
-      table
     })
   }
 

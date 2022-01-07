@@ -11,12 +11,27 @@
 
 /** @type {import('@adonisjs/lucid/src/Factory')} */
 const Factory = use('Factory')
+const Todo = use('App/Models/Todo')
+
 
 class TodoSeeder {
   async run () {
-    await Factory
-      .model('App/Model/Todo')
-      .createMany(5)
+    // await Factory
+    //   .model('App/Models/Todo')
+    //   .createMany(5)
+
+    await Todo.create({
+      title: 'Finish Adonis Screencast'
+    })
+
+    await Todo.create({
+      title: 'Work out'
+    })
+
+    await Todo.create({
+      title: 'Take over the World'
+    })
+
   }
 }
 

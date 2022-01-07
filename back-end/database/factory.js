@@ -10,7 +10,7 @@
 | with dummy data.
 |
 */
-
+/** @type {import('@adonisjs/lucid/src/Factory')} */
 const Factory = use('Factory')
 
 
